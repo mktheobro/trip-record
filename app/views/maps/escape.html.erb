@@ -91,25 +91,3 @@
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=ここにAPIKEY&callback=initMap" async defer></script>
 
-<div id='map_index' >
-<%# # idを付与, この部分にjsファイルで記述したGoogle Mapが埋め込まれる %>
-<% google_api = "https://maps.googleapis.com/maps/api/js?key=#{ ENV['GOOGLE_MAP_API'] }&callback=initMap".html_safe %>
-<script{ async src = google_api } ></script>
-</div>
-
-<div class="map-route" >
-  < ルート検索リスト >
-  <ul id = "route-list" class = "list-group" ></ul>
-  <%# # jsファイルで吹き出しの追加ボタンによってその場所がli要素に追加される %>
-</div>
-
-<div id = 'directions-panel' >
-<%# # 距離・時間が埋め込まれる %>
-  < 各地点間の距離・時間 >
-  <ul id = "display-list" class = "display-group" ></ul>
-</div>
-
-<div class="map-search" >
-   <%= button_tag "ルート検索", id: "btn-search", class: "btn btn-primary", onclick:     "search()" %>
-    <%# # クリック処理でsearch()関数を呼び出す %>
-</div>
