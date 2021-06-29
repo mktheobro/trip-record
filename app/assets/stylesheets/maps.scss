@@ -5,3 +5,17 @@
   height: 400px;
   width: 400px; 
 }
+
+.main-background{
+  display: flex; 
+ }
+ 
+ .left-side{
+   width: 50%;
+   background-color: aqua;
+ }
+ 
+ .right-side{
+   width: 50%;
+   background-color:lemonchiffon;
+ }
