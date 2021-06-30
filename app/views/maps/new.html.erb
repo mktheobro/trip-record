@@ -11,37 +11,39 @@
 
   <div class="right-side">
   ここにデータ入力
-    <%= form_with url: "/posts", method: :post, local: true do |f| %>
-      <%# 住所入力 %>
-          <div class="weight-bold-text">
-            住所
-          </div>
-          <%= f.text_area :name, class:"items-text", id:"item-name", placeholder:"住所" %>
-      <%# /住所入力 %>
-
-      <%# コメント入力 %>
+    <div class="maps-main">
+      <%= form_with url: "/posts", method: :post, local: true do |f| %>
+        <%# 住所入力 %>
             <div class="weight-bold-text">
-              おすすめポイント
+              住所
             </div>
-            <%= f.text_area :info, class:"items-text", id:"item-info", placeholder:"ポイントの説明（必須 1,000文字まで）訪れたポイントの見どころ、おすすめ商品、裏話などを書き込んでください" ,rows:"7" ,maxlength:"1000" %>
-      <%# /コメント入力 %>
+            <%= f.text_area :name, class:"maps-text", id:"maps-address", placeholder:"住所" %>
+        <%# /住所入力 %>
 
-      <%# 画像 %>
-        <div class="img-upload">
-          <div class="weight-bold-text">
-            画像
-          </div>
-          <div class="click-upload">
-            <p>
-              クリックしてファイルをアップロード
-            </p>
-            <%= f.file_field :image, id:"item-image" %>
-          </div>
-        </div>
-      <%# /出品画像 %>
+        <%# コメント入力 %>
+              <div class="weight-bold-text">
+                おすすめポイント
+              </div>
+              <%= f.text_area :info, class:"maps-text", id:"maps-comment", placeholder:"ポイントの説明（必須 1,000文字まで）訪れたポイントの見どころ、おすすめ商品、裏話などを書き込んでください" ,rows:"7" ,maxlength:"1000" %>
+        <%# /コメント入力 %>
 
-      <%= f.submit '投稿する' %>
-    <% end %>
+        <%# 画像 %>
+          <div class="img-upload">
+            <div class="weight-bold-text">
+              画像
+            </div>
+            <div class="click-upload">
+              <p>
+                クリックしてファイルをアップロード
+              </p>
+              <%= f.file_field :image, id:"item-image" %>
+            </div>
+          </div>
+        <%# /出品画像 %>
+
+        <%= f.submit '投稿する' %>
+      <% end %>
+    </div>  
   </div>
 
 

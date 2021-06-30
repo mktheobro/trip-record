@@ -19,3 +19,44 @@
    width: 50%;
    background-color:lemonchiffon;
  }
+
+ .weight-bold-text {
+  font-weight: bold;
+  min-width: 50px;
+  margin-bottom: 10px;
+}
+
+.maps-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+/* 出品画像 */
+.img-upload {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+/* /出品画像 */
+
+.maps-main {
+  background-color: #FFF;
+  width: 40vw;
+  min-width: 100px;
+  padding: 10vh 5vw;
+}
