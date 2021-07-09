@@ -12,7 +12,7 @@
   <div class="right-side">
   ここにデータ入力
     <div class="maps-main">
-      <%= form_with url: "/posts", method: :post, local: true do |f| %>
+      <%= form_with model: @point, url: maps_path, method: :post, local: true do |f| %>
         <%# 住所入力 %>
             <div class="weight-bold-text">
               住所
